@@ -1,10 +1,11 @@
-const {ethers} = require('ethers')
+const {ethers} = require('hardhat')
 
 async function main() {
-  const SimpleStorageFactory = await ethers.ContractFactory('SimpleStorage')
+  const SimpleStorageFactory = await ethers.getContractFactory('SimpleStorage')
   const deployContract = await SimpleStorageFactory.deploy()
   console.log('deploying ')
   await deployContract.deployed()
+  console.log('deployed')
 }
 
 // We recommend this pattern to be able to use async/await everywhere
