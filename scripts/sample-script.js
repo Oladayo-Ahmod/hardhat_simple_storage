@@ -1,7 +1,10 @@
 const {ethers} = require('ethers')
 
 async function main() {
-  const SimpleStorageFactory = await ethers.ContractFactory('')
+  const SimpleStorageFactory = await ethers.ContractFactory('SimpleStorage')
+  const deployContract = await SimpleStorageFactory.deploy()
+  console.log('deploying ')
+  await deployContract.deployed()
 }
 
 // We recommend this pattern to be able to use async/await everywhere
