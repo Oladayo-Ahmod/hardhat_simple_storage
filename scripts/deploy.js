@@ -16,8 +16,8 @@ async function verify(contractAddress, arg){
         constructorArguments : arg
       })
   } catch (error) {
-    if (error.includes('already verified')) {
-      console.log('Already verifies')
+    if (error.toLowerCase().includes('already verified')) {
+      console.log('Already verified')
     }
     else{
       console.log(error)
