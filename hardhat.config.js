@@ -22,15 +22,17 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const etherscan_api_key = process.env.ETHERSCAN_API_KEY
 module.exports = {
   solidity: "0.8.7",
+  defaultNetwork: 'hardhat',
   networks : {
     rinkeby : {
       url :RpcUrl,
       accounts : [private_key],
       chainId : 4
-    },
+    }
+  },
     etherscan : {
-      apiKey : process.env.etherscan_api_key
+      apiKey : etherscan_api_key
     }
 
-  }
+  
 };
