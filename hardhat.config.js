@@ -19,6 +19,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
   const RpcUrl =  process.env.RINKBY_RPC_URL 
   const private_key = process.env.RINKBY_PRIVATE_KEY
+  const etherscan_api_key = process.env.ETHERSCAN_API_KEY
 module.exports = {
   solidity: "0.8.7",
   networks : {
