@@ -8,7 +8,8 @@ async function main() {
   console.log(`deployed to ${deployContract.address}`)
   console.log(network.config)
   if (network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY) {
-   await verify(deployContract.address,[])
+      await deployContract.deployTransaction.wait(6)
+      await verify(deployContract.address,[])
   }
 }
 
