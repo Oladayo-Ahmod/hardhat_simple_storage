@@ -1,4 +1,4 @@
-const {ethers, run} = require('hardhat')
+const {ethers, run, network} = require('hardhat')
 
 async function main() {
   const SimpleStorageFactory = await ethers.getContractFactory('SimpleStorage')
@@ -6,6 +6,10 @@ async function main() {
   console.log('deploying contract ')
   await deployContract.deployed()
   console.log(`deployed to ${deployContract.address}`)
+  console.log(network.config)
+  if (network.config.chainId === 4) {
+   await verify(deployContract.address,[])
+  }
 }
 
 async function verify(contractAddress, arg){
