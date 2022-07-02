@@ -27,6 +27,9 @@ module.exports = {
       url :RpcUrl,
       accounts : [private_key],
       chainId : 4
+    },
+    etherscan : {
+      apiKey : process.env.etherscan_api_key
     }
 
   }
