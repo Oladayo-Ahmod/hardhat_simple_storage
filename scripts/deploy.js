@@ -1,12 +1,12 @@
+require('dotenv').config()
 const {ethers, run, network} = require('hardhat')
-
 async function main() {
   const SimpleStorageFactory = await ethers.getContractFactory('SimpleStorage')
   const deployContract = await SimpleStorageFactory.deploy()
   console.log('deploying contract ')
   await deployContract.deployed()
   console.log(`deployed to ${deployContract.address}`)
-  console.log(network.config)
+  // console.log(network.config)
   if (network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY) {
       await deployContract.deployTransaction.wait(6)
       await verify(deployContract.address,[])
@@ -30,6 +30,7 @@ async function verify(contractAddress, arg){
         constructorArguments : arg
       })
   } catch (error) {
+    console.log(error)
     if (error.toLowerCase().includes('already verified')) {
       console.log('Already verified')
     }
