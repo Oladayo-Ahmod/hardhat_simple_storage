@@ -11,6 +11,13 @@ async function main() {
       await deployContract.deployTransaction.wait(6)
       await verify(deployContract.address,[])
   }
+
+  // interacting with smart contract
+  const currentData = await deployContract.retrieve() // get current data
+  console.log(`current data is ${currentData}`)
+  const storeData = await deployContract.store(7)
+  await storeData.wait(1)
+  console.log(`inserted data is ${storeData}`)
 }
 
 async function verify(contractAddress, arg){
