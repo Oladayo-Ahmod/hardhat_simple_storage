@@ -18,6 +18,8 @@ async function main() {
   const storeData = await deployContract.store(7)
   await storeData.wait(1)
   console.log(`inserted data is ${storeData}`)
+  const updatedData = await deployContract.retrieve()
+  console.log(`updated data is now ${updatedData}`)
 }
 
 async function verify(contractAddress, arg){
