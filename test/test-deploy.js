@@ -14,5 +14,12 @@ describe("SimpleStorage", ()=>{
         const expectedNumber = "0"
         assert.equal(currentNumber.toString(),expectedNumber)
     })
-    // it("it should store number", asn)
+    it("It should return updated value", async ()=>{
+        const expectedvalue = "7"
+        const updatedValue = await SimpleStorage.store(expectedvalue)
+        await updatedValue.wait(1)
+
+        
+    })
+    // it
 })
