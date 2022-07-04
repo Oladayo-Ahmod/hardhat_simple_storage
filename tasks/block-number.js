@@ -7,3 +7,5 @@ task('blockNumber','Print the current block number')
         console.log(`current blocknumber : ${blockNumber}`)
     }
 )
+
+module.exports = {}

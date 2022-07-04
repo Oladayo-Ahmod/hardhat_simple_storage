@@ -1,7 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config()
 require('@nomiclabs/hardhat-etherscan')
-require('tasks/block-number.js')
+require('./tasks/block-number')
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
