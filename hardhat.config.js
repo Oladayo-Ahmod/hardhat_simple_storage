@@ -13,6 +13,7 @@ require('hardhat-gas-reporter')
 const RpcUrl =  process.env.RINKBY_RPC_URL 
 const private_key = process.env.RINKBY_PRIVATE_KEY
 const etherscan_api_key = process.env.ETHERSCAN_API_KEY
+const coinmarketcap_api = process.env.COINMARKET_API_KEY
 module.exports = {
   solidity: "0.8.7",
   defaultNetwork: 'hardhat',
