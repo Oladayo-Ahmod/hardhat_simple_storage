@@ -31,7 +31,9 @@ module.exports = {
       apiKey : etherscan_api_key
     },
     gasReporter :{
-      enable : true
+      enable : true,
+      noColors : true,
+      outputFile : 'gas-fee-report.txt'
     }
 
   
