@@ -9,9 +9,9 @@ require('./tasks/block-number')
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-  const RpcUrl =  process.env.RINKBY_RPC_URL 
-  const private_key = process.env.RINKBY_PRIVATE_KEY
-  const etherscan_api_key = process.env.ETHERSCAN_API_KEY
+const RpcUrl =  process.env.RINKBY_RPC_URL 
+const private_key = process.env.RINKBY_PRIVATE_KEY
+const etherscan_api_key = process.env.ETHERSCAN_API_KEY
 module.exports = {
   solidity: "0.8.7",
   defaultNetwork: 'hardhat',
@@ -20,6 +20,10 @@ module.exports = {
       url :RpcUrl,
       accounts : [private_key],
       chainId : 4
+    },
+    localhost : {
+      url : 'http://127.0.0.1:8545/',
+      chainId : 31337
     }
   },
     etherscan : {
