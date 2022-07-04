@@ -33,7 +33,9 @@ module.exports = {
     gasReporter :{
       enable : true,
       noColors : true,
-      outputFile : 'gas-fee-report.txt'
+      outputFile : 'gas-fee-report.txt',
+      currency : "USD",
+      coinmarketcap : coinmarketcap_api,
     }
 
   
