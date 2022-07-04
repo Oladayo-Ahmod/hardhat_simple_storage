@@ -19,7 +19,8 @@ describe("SimpleStorage", ()=>{
         const updatedValue = await SimpleStorage.store(expectedvalue)
         await updatedValue.wait(1)
 
-        
+        assert.equal(updatedValue.toString(),expectedvalue)
+
     })
     // it
 })
