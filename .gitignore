@@ -10,3 +10,5 @@ typechain
 cache
 artifacts
 gas-fee-report.txt
+coverage
+coverage.json
